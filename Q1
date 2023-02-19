@@ -1,0 +1,18 @@
+maior, qtd, media, total, menor = 0, 0, 0, 0, 99999999
+valor = 's'
+while valor != '':
+    valor = input("Informe um valor inteiro ou enter para finalizar ")
+    if valor != '':
+        qtd = 1+qtd
+        total = total + int(valor)
+        if int(valor) > maior:
+            maior = int(valor)
+        if int(valor) < menor:
+            menor = int(valor)
+        media = total / qtd
+
+    elif valor == '' and qtd == 0:
+        print("Nenhum número foi lido – A primeira linha lida foi vazia!!!")
+
+if qtd > 0:
+    print("Menor:", menor, ",Maior:", maior, "e Média:", media)

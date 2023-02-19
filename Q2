@@ -1,0 +1,13 @@
+entrada = input("Informe a frase: ")
+frase = entrada.lower()
+v_a = frase.count("a") + frase.count("à") + frase.count("á") + frase.count("â") + frase.count("ã") + frase.count("ä")
+v_e = frase.count("e") + frase.count("è") + frase.count("é") + frase.count("ê") + frase.count("ë")
+v_i = frase.count("i") + frase.count("ì") + frase.count("í") + frase.count("î") + frase.count("ï")
+v_o = frase.count("o") + frase.count("ò") + frase.count("ó") + frase.count("ô") + frase.count("õ") + frase.count("ö")
+v_u = frase.count("u") + frase.count("ù") + frase.count("ó") + frase.count("û") + frase.count("ü")
+v_t = v_a + v_e + v_i + v_o + v_u
+if v_t > 0:
+    print ("No total há", v_t,"vogais na entrada", entrada)
+    print ("Há", v_a,"A's,", v_e,"E's",v_i,"I's",v_o,"O's",v_u,"U's")
+else:
+    print("Não há vogais na entrada", entrada)
